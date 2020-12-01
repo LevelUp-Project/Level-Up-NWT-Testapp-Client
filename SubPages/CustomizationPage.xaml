@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NWT.CustomizationPage"
+             BackgroundColor="#ffffff"
+             Title="Följ Ämnen"
+             >
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS, Android" Value="0,30,0,0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView Grid.Row="0" Grid.RowSpan="8" Grid.Column="0" Grid.ColumnSpan="3">
+                <Grid x:Name="CustomizationGrid" RowSpacing="1" ColumnSpacing="0" Grid.Column="0" Grid.Row="0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="POPULÄRA KATEGORIER" FontSize="14" TextColor="Black" VerticalOptions="Center"/>
+                    <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="BROTT OCH BLÅLJUS" FontSize="16" TextColor="Black" VerticalOptions="Center" BackgroundColor="White" ClassId="Brott &amp; Blåljus" Clicked="CategoryButtonClicked"/>
+                    <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="SPORT" FontSize="16" TextColor="Black" VerticalOptions="Center" BackgroundColor="White" ClassId="Sport" Clicked="CategoryButtonClicked"/>
+                    <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Text="BOSTAD" FontSize="16" TextColor="Black" VerticalOptions="Center" BackgroundColor="White" ClassId="Bostad" Clicked="CategoryButtonClicked"/>
+                    <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="POLITIK" FontSize="16" TextColor="Black" VerticalOptions="Center" BackgroundColor="White" ClassId="Politik" Clicked="CategoryButtonClicked"/>
+                    <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Text="SKOLA OCH UTBILDNING" FontSize="16" TextColor="Black" VerticalOptions="Center" BackgroundColor="White" ClassId="Skola &amp; Utbildning" Clicked="CategoryButtonClicked"/>
+                    <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Text="TRAFIK" FontSize="16" TextColor="Black" VerticalOptions="Center" BackgroundColor="White" ClassId="Trafik" Clicked="CategoryButtonClicked"/>
+                    <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Text="EKONOMI" FontSize="16" TextColor="Black" VerticalOptions="Center" BackgroundColor="White" ClassId="Ekonomi" Clicked="CategoryButtonClicked"/>
+                    <Button Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Text="HELG" FontSize="16" TextColor="Black" VerticalOptions="Center" BackgroundColor="White" ClassId="Helg" Clicked="CategoryButtonClicked"/>
+                    <Button Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Text="NÖJE/KULTUR" FontSize="16" TextColor="Black" VerticalOptions="Center" BackgroundColor="White" ClassId="Nöje/Kultur" Clicked="CategoryButtonClicked"/>
+                    <Button Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2" Text="FAMILJ" FontSize="16" TextColor="Black" VerticalOptions="Center" BackgroundColor="White" ClassId="Familj" Clicked="CategoryButtonClicked"/>
+                    <Button Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2" Text="ÅSIKTER" FontSize="16" TextColor="Black" VerticalOptions="Center" BackgroundColor="White" ClassId="Åsikter" Clicked="CategoryButtonClicked"/>
+                    <Button Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="2" Text="LEDARE" FontSize="16" TextColor="Black" VerticalOptions="Center" BackgroundColor="White" ClassId="Ledare" Clicked="CategoryButtonClicked"/>
+                    <Button Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="2" Text="DEBATT" FontSize="16" TextColor="Black" VerticalOptions="Center" BackgroundColor="White" ClassId="Debatt" Clicked="CategoryButtonClicked"/>
+                    <Button Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="2" Text="INSÄNDARE" FontSize="16" TextColor="Black" VerticalOptions="Center" BackgroundColor="White" ClassId="Insändare" Clicked="CategoryButtonClicked"/>
+                    <Button Grid.Row="16" Grid.Column="0" Grid.ColumnSpan="2" Text="DIN ORT" FontSize="14" TextColor="Black" VerticalOptions="Center"/>
+                    <Button Grid.Row="17" Grid.Column="0" Grid.ColumnSpan="2" Text="SKÖVDE" FontSize="16" TextColor="Black" VerticalOptions="Center" ClassId="Skövde" Clicked="TagButtonClicked"/>
+                    <Button Grid.Row="18" Grid.Column="0" Grid.ColumnSpan="2" Text="TIBRO" FontSize="16" TextColor="Black" VerticalOptions="Center" ClassId="Tibro" Clicked="TagButtonClicked"/>
+                    <Button Grid.Row="19" Grid.Column="0" Grid.ColumnSpan="2" Text="FALKÖPING" FontSize="16" TextColor="Black" VerticalOptions="Center" ClassId="Falköping" Clicked="TagButtonClicked"/>
+                    <Button Grid.Row="20" Grid.Column="0" Grid.ColumnSpan="2" Text="KARLSBORG" FontSize="16" TextColor="Black" VerticalOptions="Center" ClassId="Karlsborg" Clicked="TagButtonClicked"/>
+                </Grid>
+            </ScrollView>
+            <Button Text="Starta appen!" TextColor="White" Clicked="StartButtonPressed" BackgroundColor="#649FD4" Margin="0" x:Name="StartButton"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

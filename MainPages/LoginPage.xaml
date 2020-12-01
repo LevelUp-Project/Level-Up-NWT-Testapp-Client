@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             x:Class="NWT.LoginPage"
+             x:Name = "Loginpage" 
+             BackgroundColor="#ffffff"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <Grid x:Name="LoginGrid" RowSpacing="0" ColumnSpacing="0" Margin="30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <forms:AnimationView 
+	                x:Name="animationLogin" 
+	                Grid.Row="0" Grid.RowSpan="2"
+	                Animation="checkmark.json"
+	                Loop="false"
+	                AutoPlay="false"
+	                />
+                <Label x:Name="Label" Text="SLA Testapp" TextColor="#649FD4" FontSize="48" Grid.Row="1" Grid.RowSpan="3" HorizontalOptions="Center" VerticalOptions="End" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="ANVÄNDARNAMN" TextColor="DimGray" FontSize="8" Grid.Row="5" VerticalOptions="Start"/>
+                <Entry x:Name="UserLogin" x:FieldModifier="public" Placeholder="dittnamn" Grid.Row="5" TextColor="Black" VerticalOptions="End"/>
+                <Label Text="LÖSENORD" TextColor="DimGray" FontSize="8" Grid.Row="7" VerticalOptions="Start"/>
+                <Entry x:Name="UserPassword" x:FieldModifier="public" IsPassword="True" Placeholder="*****" TextColor="Black" Grid.Row="7" VerticalOptions="End"/>
+                <Button x:Name="LoginButton" Text="Logga in"  Clicked="Login"  BackgroundColor="#649FD4" TextColor="White" Grid.Row="9" HeightRequest="50"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

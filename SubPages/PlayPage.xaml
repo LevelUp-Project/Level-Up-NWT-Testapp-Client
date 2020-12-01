@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NWT.PlayPage"
+             Icon="slaicon.png"
+             Title="Hubb"
+             BackgroundColor="#ffffff">
+    <ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS, Android" Value="0,0,0,0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout  Padding="0" Spacing="5" VerticalOptions="Start">
+            <Grid x:Name="LoginGrid" RowSpacing="0" ColumnSpacing="0" VerticalOptions="StartAndExpand" >
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image x:Name="SudokuButton" Source="soduko.png" Grid.Row="0" Grid.Column="0" Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PlaySudoku" NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="QuizButton" Source="Quiz.png" Grid.Row="2" Grid.Column="0" Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PlayQuiz" NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="PicrossButton" Source="Picross.png" Grid.Row="4" Grid.Column="0" Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PlayPicross" NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

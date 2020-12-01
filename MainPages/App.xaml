@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NWT.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="backgroundColor">#649FD4</Color>
+            <Color x:Key="backgroundColor2">Gray</Color>
+            <Color x:Key="textColorWhite">White</Color>
+            <Color x:Key="textColorBlack">Black</Color>
+            <Color x:Key="textColorGray">Gray</Color>
+            <Style x:Key="whiteLabelStyle" TargetType="Label" ApplyToDerivedTypes="True">
+                <Setter Property="TextColor" Value="{DynamicResource textColorWhite}" />
+            </Style>
+            <Style x:Key="blackLabelStyle" TargetType="Label" ApplyToDerivedTypes="True">
+                <Setter Property="TextColor" Value="{DynamicResource textColorBlack}" />
+            </Style>
+            <Style x:Key="grayLabelStyle" TargetType="Label" ApplyToDerivedTypes="True">
+                <Setter Property="TextColor" Value="{DynamicResource textColorGray}" />
+            </Style>
+            <Style x:Key="bluePageStyle" TargetType="ContentPage" ApplyToDerivedTypes="True">
+                <Setter Property="BackgroundColor" Value="{DynamicResource backgroundColor}" />
+            </Style>
+            <Color x:Key="primary-back-title-color">#649FD4</Color>
+            <Color x:Key="primary-title-color">#FFFFFF</Color>
+            <Style x:Name="AppStyle" x:FieldModifier="public" ApplyToDerivedTypes="true" TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Key=primary-back-title-color}"/>
+                <Setter Property="BarTextColor" Value="{StaticResource Key=textColorWhite}"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

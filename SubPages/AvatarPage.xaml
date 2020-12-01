@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NWT.AvatarPage"
+             BackgroundColor="#FFFFFF"
+             Title="Figur">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS, Android" Value="0,0,0,0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentView>
+        <Grid x:Name="AvatarButtonsGrid" RowSpacing="0" ColumnSpacing="0" Margin="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image x:Name="ProfilePictureFace" Source="" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <Image x:Name="ProfilePictureBeard" Source="" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <Image x:Name="ProfilePictureHair" Source="" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <Image x:Name="ProfilePictureBody" Source="" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <Image x:Name="ProfilePictureExpr" Source="" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <Image x:Name="Face" ClassId="Face" Source="icon_body.png" BackgroundColor="Red" Grid.Row="2" Grid.Column="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="2">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OpenMenu" NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Image x:Name="FaceImage" />
+            <Image x:Name="Hair" ClassId="Hair" Source="icon_head" BackgroundColor="Yellow" Grid.Row="2" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="2">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OpenMenu" NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Image x:Name="Body" ClassId="Body" Source="icon_clothing2" BackgroundColor="Blue" Grid.Row="2" Grid.Column="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="2" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OpenMenu" NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Image x:Name="Nr4" ClassId="Nr4" Source="questionMark" BackgroundColor="Purple" Grid.Row="2" Grid.Column="3" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="2" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Question" NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Image x:Name="Option1" Source="avatar_hair6" BackgroundColor="Red" Grid.Row="3" Grid.Column="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="2" IsVisible="False" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OpenSubMenu" NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Image x:Name="Option2" Source="avatar_hair6" BackgroundColor="Yellow" Grid.Row="3" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="2" IsVisible="False" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OpenSubMenu" NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Image x:Name="Option3" Source="avatar_hair6" BackgroundColor="Blue" Grid.Row="3" Grid.Column="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="2" IsVisible="False" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OpenSubMenu" NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Image x:Name="Option4" Source="avatar_hair6" BackgroundColor="Purple" Grid.Row="3" Grid.Column="3" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="2" IsVisible="False" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OpenSubMenu" NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+            <ScrollView Grid.Row="4" Grid.RowSpan="4" Grid.Column="0" Grid.ColumnSpan="4" >
+                <Grid x:Name="ItemsGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </ScrollView>
+        </Grid>
+    </ContentView>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NWT.UserSubmissionPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid x:Name="UserNewsGrid" RowSpacing="0" ColumnSpacing="0" Margin="0" BackgroundColor="#f8f8f9">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" BackgroundColor="White" CornerRadius="20" Margin="10"/>
+                <Editor x:Name="Rubrik" Text="Rubrik" Grid.Column="0" Grid.Row="0" Margin="20" />
+                <Editor x:Name="Ingress" Text="Ingress" Grid.Column="0" Grid.Row="1" Margin="20"/>
+                <Editor x:Name="Brodtext" Text="Brodtext" Grid.Column="0" Grid.Row="2" Margin="20"/>
+                <Button BackgroundColor="#50d2c2" Text="Reference" CornerRadius="20" Grid.Column="0" Grid.Row="3" Margin="10" Clicked="GetReference"/>
+                <Button BackgroundColor="#50d2c2" Text="Submit" CornerRadius="20" Grid.Column="0" Grid.Row="4" Margin="10" Clicked="Submit"/>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

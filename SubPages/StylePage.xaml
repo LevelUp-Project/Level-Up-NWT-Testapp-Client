@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             x:Class="NWT.StylePage"
+             BackgroundColor="#FFFFFF"
+             Title="Stil">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS, Android" Value="0,0,0,0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid x:Name="StyleGrid" RowSpacing="0" ColumnSpacing="0" Margin="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="Välj en färg som passar dig!" TextColor="Black" FontSize="24" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
